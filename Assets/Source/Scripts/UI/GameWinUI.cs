@@ -1,18 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class GameWinUI : MonoBehaviour
+public class GameWinUI : UIElement
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Button _homeButton;
+    public override void AddListeners()
     {
-        
+        _homeButton.onClick.AddListener(BackHome);
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void RemoveListeners()
     {
-        
+        _homeButton.onClick.RemoveListener(BackHome);
+    }
+
+    public override void Init()
+    {
+        throw new System.NotImplementedException();
+    }
+    
+
+    private void BackHome()
+    {
+        SceneManager.LoadScene("home");
+        UISystem.Instance.CloseCurrentWindow();
     }
 }

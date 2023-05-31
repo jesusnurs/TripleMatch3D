@@ -11,13 +11,15 @@ public class TimerSystem : MonoBehaviour
     private bool isRunning;
     [SerializeField]private float timeLeft;
     private float lazyTime;
-        
+
     public void Init()
     {
         GameStateCallBacks.Instance.OnGameWon += StopTimer;
         GameStateCallBacks.Instance.OnGameLost += StopTimer;
+        
+        OnTimerFinished += OpenTimerFinishedUI;
     }
-    
+
     private void Awake()
     {
         if (Instance != null)
@@ -86,7 +88,12 @@ public class TimerSystem : MonoBehaviour
     {
         return TimeSpan.FromSeconds(lazyTime);
     }
-
+    
+    private void OpenTimerFinishedUI()
+    {
+        SelectionSystem.Instance.DeactivateSelectionSystem();
+        UISystem.Instance.OpenWindow("TimerFinished");
+    }
     private void Update()
     {
         if (!isRunning) return;

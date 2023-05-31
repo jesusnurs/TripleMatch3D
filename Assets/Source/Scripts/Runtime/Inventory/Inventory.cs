@@ -23,7 +23,14 @@ public class Inventory : MonoBehaviour
     }
     private void Start()
     {
-        OnInventoryFull += GameStateCallBacks.Instance.OnGameLost;
+        OnInventoryFull += OpenFullInventoryUI;
+    }
+
+    private void OpenFullInventoryUI()
+    {
+        SelectionSystem.Instance.DeactivateSelectionSystem();
+        TimerSystem.Instance.StopTimer();
+        UISystem.Instance.OpenWindow("FullInventory");
     }
 
     public void SetObjectToCell(Sprite sprite,int id)

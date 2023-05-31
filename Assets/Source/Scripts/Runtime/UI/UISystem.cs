@@ -1,17 +1,22 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class UISystem : MonoBehaviour
 {
     public static UISystem Instance { get; set; }
 
-    //[SerializeField] private List<UIWindow3> windows;
-    //private Dictionary<string, UIWindow3> windowDictionary;
+    [SerializeField] private Transform _UIFolder;
     
-    private Stack<UIElement> windowStack;
+    [SerializeField] private List<UIElement> windows;
+    private Dictionary<string, UIElement> windowDictionary;
+    
+    private Stack<UIElement> windowStack = new Stack<UIElement>();
     private List<string>  openWindowNames = new List<string>();
+
+    private UIElement _currentWindow;
     
     
     private void Awake()
@@ -22,33 +27,46 @@ public class UISystem : MonoBehaviour
             Instance = this;
     }
 
-    private void OpenWindow(UIElement prefab)
+    private void Start()
     {
-        
-    }
-    
-    private void CloseWindow(UIElement prefab)
-    {
-        
+        foreach (var window in windows)
+        {
+            windowDictionary = windows.ToDictionary(x => x.Name, x => x);
+        }
     }
 
-    public UIElement CloseCurrentWindow()
+    public void OpenWindow(string windowName)
     {
+        if(_currentWindow != null)
+            _currentWindow.Close();
+
+        
+        var window = Instantiate(windowDictionary[windowName],_UIFolder).GetComponent<UIElement>();
+        //window.gameObject.transform.SetParent(_UIFolder);
+        
+        windowStack.Push(window);
+        window.Open();
+
+        _currentWindow = window;
+    }
+    
+    /*
+    private void CloseWindow(UIElement prefab)
+    {
+        windowStack.Pop();
+        prefab.gameObject.SetActive(true);
+    }
+    */
+
+    public void CloseCurrentWindow()
+    {
+        var closeWindow = windowStack.Pop();
+        closeWindow.Destroy();
+        
         if (windowStack.Count > 0)
         {
-            var window = windowStack.Pop();
-            openWindowNames.Remove(window.name);
-            window.Destroy();
-            if (windowStack.Count > 0)
-            {
-                windowStack.Peek().OpenWithChildren();
-            }
-            return window;
-        }
-        else
-        {
-            Debug.LogError("No window open");
-            return null;
+            _currentWindow = windowStack.Peek();
+            _currentWindow.Open();
         }
     }
 }

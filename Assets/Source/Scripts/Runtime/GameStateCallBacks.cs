@@ -18,4 +18,5 @@ public class GameStateCallBacks : MonoBehaviour
         else
             Instance = this;
     }
+    
 }

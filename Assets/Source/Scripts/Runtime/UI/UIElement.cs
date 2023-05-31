@@ -19,6 +19,8 @@ public abstract class UIElement : MonoBehaviour
     public Action OnClose { get; set; }
     public Action OnDestroy { get; set; }
 
+    public string Name;
+
         
     /// <summary>
     /// Method reserved for adding button listeners, executed on open 
