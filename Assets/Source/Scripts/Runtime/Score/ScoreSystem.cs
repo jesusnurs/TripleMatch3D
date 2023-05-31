@@ -7,10 +7,19 @@ using UnityEngine.UI;
 
 public class ScoreSystem : MonoBehaviour
 {
-
+    public static ScoreSystem Instance { get; private set; }
+    
     [SerializeField] private TextMeshProUGUI _scoreText;
 
     private int _score;
+    
+    private void Awake()
+    {
+        if (Instance != null)
+            Destroy(gameObject);
+        else
+            Instance = this;
+    }
 
     public void UpdateScore(int score)
     {

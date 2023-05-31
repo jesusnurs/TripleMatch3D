@@ -6,7 +6,6 @@ using TMPro;
 
 public class PaoTimerUI : MonoBehaviour
 {
-    [SerializeField] private TimerSystem timerSystem;
     
     [SerializeField] private TextMeshProUGUI timerText;
 
@@ -14,7 +13,7 @@ public class PaoTimerUI : MonoBehaviour
     {
         //_timerText.text = _timerSystem.GetTime().Seconds.ToString();
         
-        var time = timerSystem.GetTime();
+        var time = TimerSystem.Instance.GetTime();
 
         if (time.TotalSeconds > 60)
         {

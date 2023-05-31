@@ -140,12 +140,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8366991055160032151}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Script: {fileID: 11500000, guid: 3fe04f914d06d2a43a9f3dec52e7968f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 10
+  outlineWidth: 7
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []

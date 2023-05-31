@@ -6,13 +6,13 @@ using UnityEngine;
 public class PaoSelectableObject : MonoBehaviour,ISelectable
 {
     public Sprite Icon { get; set; }
-    //public GameObject Prefab  { get; set; } 
     public int Id { get; set; }
-
+    
     public void OnSelect()
     {
         Destroy(gameObject);
     }
+    
 }
 
 public interface ISelectable

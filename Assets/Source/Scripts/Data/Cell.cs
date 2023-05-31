@@ -11,12 +11,14 @@ public class Cell : MonoBehaviour
     
     public void SetObject(Sprite sprite,int id)
     {
+        _icon.enabled = true;
         _icon.sprite = sprite;
         idObject = id;
     }
 
     public void ClearCell()
     {
+        _icon.enabled = false;
         _icon.sprite = null;
         idObject = -1;
     }

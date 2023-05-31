@@ -10,7 +10,6 @@ public class Inventory : MonoBehaviour
     public static Inventory Instance { get; private set; }
     
     [SerializeField] private List<Cell> _listOfCells;
-    [SerializeField] private ScoreSystem _scoreSystem;
     
     public Action OnInventoryFull { get; set; }
 
@@ -67,7 +66,7 @@ public class Inventory : MonoBehaviour
                 if (cnt == 3)
                 {
                     StartCoroutine(ClearCells(_listOfCells[i].idObject));
-                    _scoreSystem.UpdateScore(3);
+                    ScoreSystem.Instance.UpdateScore(3);
                     return;
                 }
             }
