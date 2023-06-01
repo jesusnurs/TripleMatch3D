@@ -766,6 +766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _UIFolder: {fileID: 1970977031}
+  _defaultWindow: 
   windows:
   - {fileID: 6932247740815489810, guid: 1fd971321cb491b4b8be866e61f43228, type: 3}
   - {fileID: 8958224851250422820, guid: 93dd4a8ed48d31646b9e660fcad9f983, type: 3}
@@ -1101,6 +1102,7 @@ Transform:
   - {fileID: 587093308}
   - {fileID: 1191790770}
   - {fileID: 522932524}
+  - {fileID: 1526275956}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1156,7 +1158,6 @@ MonoBehaviour:
   - {fileID: 1578543891}
   - {fileID: 667712634}
   - {fileID: 890432173}
-  _scoreSystem: {fileID: 0}
 --- !u!1 &1493563891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,6 +1225,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1526275955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1526275956}
+  - component: {fileID: 1526275957}
+  m_Layer: 0
+  m_Name: LevelObjectsCounter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1526275956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526275955}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1133192948}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1526275957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526275955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a666127970760624f9ce121efbcb0270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1577194895 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3127522296110359087, guid: 9521d7db1126c55428381576f7916ed8, type: 3}

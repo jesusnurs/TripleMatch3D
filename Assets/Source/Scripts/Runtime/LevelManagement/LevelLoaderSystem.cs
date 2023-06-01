@@ -25,6 +25,7 @@ public class LevelLoaderSystem : MonoBehaviour
     
     private void Start()
     {
+        _currentLevelId = PlayerPrefs.GetInt("level") - 1;
         RunCurrentLevel();
         GameStateCallBacks.Instance.OnGameWon += IncreaseCurrentLevel;
     }
@@ -50,5 +51,6 @@ public class LevelLoaderSystem : MonoBehaviour
     public void IncreaseCurrentLevel()
     {
         _currentLevelId++;
+        PlayerPrefs.SetInt("level",_currentLevelId+1);
     }
 }

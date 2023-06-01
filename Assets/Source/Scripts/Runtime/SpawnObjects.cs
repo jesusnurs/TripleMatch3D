@@ -48,6 +48,8 @@ namespace Runtime
                     _listOfAllObjects.Add(obj);
                 }
             }
+
+            LevelObjectsCounter.Instance.SetAllObjects(_listOfAllObjects);
         }
         
     }

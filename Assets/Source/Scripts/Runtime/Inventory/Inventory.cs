@@ -34,15 +34,18 @@ public class Inventory : MonoBehaviour
 
     public void SetObjectToCell(Sprite sprite,int id)
     {
-        CheckInventoryFull();
         foreach (Cell cell in _listOfCells)
         {
             if (cell.IsEmpty())
             {
                 cell.SetObject(sprite,id);
-                CheckTriple();
-                return;
+                break;
             }
+        }
+        
+        if (!CheckInventoryFull())
+        {
+            CheckTriple();
         }
     }
 
@@ -89,15 +92,16 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    private void CheckInventoryFull()
+    private bool CheckInventoryFull()
     {
         foreach (Cell cell in _listOfCells)
         {
-            if (cell.IsEmpty() && cell != _listOfCells[_listOfCells.Count-1])
+            if (cell.IsEmpty())
             {
-                return;
+                return false;
             }
         }
         OnInventoryFull?.Invoke();
+        return true;
     }
 }

@@ -36,6 +36,12 @@ public abstract class UIElement : MonoBehaviour
     /// Base Init method, executed before AddListeners 
     /// </summary>
     public abstract void Init();
+
+    private void Start()
+    {
+        Init();
+    }
+
     public virtual void Open()
     {
         AddListeners();

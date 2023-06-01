@@ -9,6 +9,7 @@ public class UISystem : MonoBehaviour
     public static UISystem Instance { get; set; }
 
     [SerializeField] private Transform _UIFolder;
+    [SerializeField] private string _defaultWindow;
     
     [SerializeField] private List<UIElement> windows;
     private Dictionary<string, UIElement> windowDictionary;
@@ -33,6 +34,8 @@ public class UISystem : MonoBehaviour
         {
             windowDictionary = windows.ToDictionary(x => x.Name, x => x);
         }
+        if(_defaultWindow != "")
+            OpenWindow(_defaultWindow);
     }
 
     public void OpenWindow(string windowName)
