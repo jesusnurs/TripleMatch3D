@@ -28,7 +28,7 @@ public class Inventory : MonoBehaviour
     private void OpenFullInventoryUI()
     {
         SelectionSystem.Instance.DeactivateSelectionSystem();
-        TimerSystem.Instance.StopTimer();
+        TimerSystem.Instance.PauseTimer();
         UISystem.Instance.OpenWindow("FullInventory");
     }
 

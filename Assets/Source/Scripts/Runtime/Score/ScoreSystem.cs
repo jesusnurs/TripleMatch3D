@@ -21,6 +21,11 @@ public class ScoreSystem : MonoBehaviour
             Instance = this;
     }
 
+    private void Start()
+    {
+        GameStateCallBacks.Instance.OnGameWon += AddScoreToPlayer;
+    }
+
     public void UpdateScore(int score)
     {
         _score += score;
@@ -30,5 +35,11 @@ public class ScoreSystem : MonoBehaviour
     public int GetScore()
     {
         return _score;
+    }
+
+    public void AddScoreToPlayer()
+    {
+        var currentScore = PlayerPrefs.GetInt("score");
+        PlayerPrefs.SetInt("score", currentScore + _score);
     }
 }

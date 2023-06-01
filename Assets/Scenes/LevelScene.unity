@@ -311,6 +311,7 @@ MonoBehaviour:
   _listOfLevels:
   - {fileID: 11400000, guid: d39b4e628f4943f46a72830e28e1a48d, type: 2}
   - {fileID: 11400000, guid: fa29fd0785b7d7346b651384e24a5f39, type: 2}
+  - {fileID: 11400000, guid: ba8e4e77f1cd59640a9a5835e48b43fa, type: 2}
   _currentLevelId: 0
 --- !u!1 &522932523
 GameObject:
@@ -1811,6 +1812,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3127522296936858410, guid: 9521d7db1126c55428381576f7916ed8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c32b5bae53783d046992e4aeaf37be28, type: 3}
     - target: {fileID: 3127522297057850508, guid: 9521d7db1126c55428381576f7916ed8, type: 3}
       propertyPath: m_Enabled
       value: 0

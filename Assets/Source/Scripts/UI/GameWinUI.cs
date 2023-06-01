@@ -20,7 +20,7 @@ public class GameWinUI : UIElement
 
     public override void Init()
     {
-        throw new System.NotImplementedException();
+        
     }
     
 

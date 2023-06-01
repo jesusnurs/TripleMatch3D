@@ -23,7 +23,12 @@ public class LevelObjectsCounter : MonoBehaviour
         GameStateCallBacks.Instance.OnGameWon += OnAllObjectsSelected;
     }
 
-    private void Update()
+    private void FixedUpdate()
+    {
+        CheckObjectsInBox();
+    }
+
+    public void CheckObjectsInBox()
     {
         if (_listOfAllObjects != null && IsPlaying)
         {
@@ -32,12 +37,10 @@ public class LevelObjectsCounter : MonoBehaviour
                 if(obj != null)
                     return;
             }
-
             IsPlaying = false;
             GameStateCallBacks.Instance.OnGameWon();
         }
     }
-
     public void SetAllObjects(List<PaoSelectableObject> objs)
     {
         _listOfAllObjects = objs;
