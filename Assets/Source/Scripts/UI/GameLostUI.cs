@@ -23,7 +23,7 @@ public class GameLostUI : UIElement
 
     public override void Init()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     private void RetryLevel()

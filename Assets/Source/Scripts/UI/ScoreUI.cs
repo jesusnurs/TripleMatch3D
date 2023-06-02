@@ -1,18 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class ScoreUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private TextMeshProUGUI _scoreText;
+    [SerializeField] private Slider _multiplierSlider;
+    [SerializeField] private TextMeshProUGUI _multiplierSliderText;
+    
+    public void Update()
     {
+        _scoreText.text = ScoreSystem.Instance.GetScore().ToString();
+        _multiplierSliderText.text = "x " + ScoreSystem.Instance.GetMultiplier().ToString();
         
-    }
+        var multiplierTimer = ScoreSystem.Instance.GetMultiplierTimer();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (multiplierTimer > 0)
+        {
+            _multiplierSlider.value = multiplierTimer;
+        }
+        else
+            _multiplierSlider.value = 0;
     }
 }

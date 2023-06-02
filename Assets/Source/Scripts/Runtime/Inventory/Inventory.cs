@@ -13,6 +13,8 @@ public class Inventory : MonoBehaviour
     
     public Action OnInventoryFull { get; set; }
 
+    private bool _checkInventoryFull;
+
     private void Awake()
     {
         if (Instance != null)
@@ -42,11 +44,9 @@ public class Inventory : MonoBehaviour
                 break;
             }
         }
-        
-        if (!CheckInventoryFull())
-        {
-            CheckTriple();
-        }
+        CheckTriple();
+        if(_checkInventoryFull)
+            CheckInventoryFull();
     }
 
     private void CheckTriple()
@@ -69,11 +69,14 @@ public class Inventory : MonoBehaviour
                 if (cnt == 3)
                 {
                     StartCoroutine(ClearCells(_listOfCells[i].idObject));
-                    ScoreSystem.Instance.UpdateScore(3);
+                    ScoreSystem.Instance.UpdateScore();
+                    _checkInventoryFull = false;
                     return;
                 }
             }
         }
+
+        _checkInventoryFull = true;
     }
 
     private IEnumerator ClearCells(int id)
@@ -92,16 +95,15 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    private bool CheckInventoryFull()
+    private void CheckInventoryFull()
     {
         foreach (Cell cell in _listOfCells)
         {
             if (cell.IsEmpty())
             {
-                return false;
+                return;
             }
         }
         OnInventoryFull?.Invoke();
-        return true;
     }
 }

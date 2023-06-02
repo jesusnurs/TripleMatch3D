@@ -20,8 +20,8 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        if(!PlayerPrefs.HasKey("score"))
-            PlayerPrefs.SetInt("score",0);
+        CheckScoreWoodenChest();
+        CheckScoreGoldenChest();
         
         if(deletePlayerPrefs)
             PlayerPrefs.DeleteAll();
@@ -36,8 +36,55 @@ public class MainMenu : MonoBehaviour
         return PlayerPrefs.GetInt("level").ToString() + " level";
     }
     
-    public string GetCurrentScore()
+    public string GetScoreWoodenChest()
     {
         return PlayerPrefs.GetInt("score").ToString() + "/1000";
+    }
+    
+    public string GetScoreGoldenChest()
+    {
+        return PlayerPrefs.GetInt("level").ToString() + "/" + PlayerPrefs.GetInt("NextGoldenChest").ToString();
+    }
+
+    private void CheckScoreWoodenChest()
+    {
+        if(!PlayerPrefs.HasKey("score"))
+            PlayerPrefs.SetInt("score",0);
+        else
+        {
+            int score = PlayerPrefs.GetInt("score");
+            while(score >= 1000)
+            {
+                score -= 1000;
+                PlayerPrefs.SetInt("score",score);
+                OpenWoodenChest();
+            }
+        }
+    }
+    
+    private void CheckScoreGoldenChest()
+    {
+        if(!PlayerPrefs.HasKey("NextGoldenChest"))
+            PlayerPrefs.SetInt("NextGoldenChest",5);
+        else
+        {
+            int level = PlayerPrefs.GetInt("level");
+            int nextGoldenChest = PlayerPrefs.GetInt("NextGoldenChest");
+            while(level >= nextGoldenChest)
+            {
+                PlayerPrefs.SetInt("NextGoldenChest",nextGoldenChest+5);
+                OpenGoldenChest();
+            }
+        }
+    }
+
+    private void OpenWoodenChest()
+    {
+        Debug.Log("OpenWoodenChest");
+    }
+    
+    private void OpenGoldenChest()
+    {
+        Debug.Log("OpenGoldenChest");
     }
 }

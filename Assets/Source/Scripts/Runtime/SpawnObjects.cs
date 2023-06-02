@@ -39,9 +39,9 @@ namespace Runtime
             {
                 for (int i = 0; i < level.AmountOfPairs * 3; i++)
                 {
-                    Vector3 rndSpawnPos = new Vector3(_spawnBoxCenter.position.x + Random.Range(-3, 3),
+                    Vector3 rndSpawnPos = new Vector3(_spawnBoxCenter.position.x + Random.Range(-2, 2),
                         _spawnBoxCenter.position.y + Random.Range(0, 3),
-                        _spawnBoxCenter.position.z + Random.Range(-3, 3));
+                        _spawnBoxCenter.position.z + Random.Range(-2, 2));
                     PaoSelectableObject obj = Instantiate(item.Prefab, rndSpawnPos, Quaternion.identity).GetComponent<PaoSelectableObject>();
                     obj.Icon = item.Icon;
                     obj.Id = item.Id;

@@ -18,5 +18,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4a260dc9b1d5b0148a70ca970aa70d0f, type: 2}
   - {fileID: 11400000, guid: a44b3ef0eef3f8242aea5ace04e7eb4c, type: 2}
   - {fileID: 11400000, guid: 2b5cfaf2d2880e248bf12ac9eb9b45fd, type: 2}
-  AmountOfPairs: 5
+  AmountOfPairs: 10
   Timer: 50

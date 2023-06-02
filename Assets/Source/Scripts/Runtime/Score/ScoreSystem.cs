@@ -2,16 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
 
 public class ScoreSystem : MonoBehaviour
 {
     public static ScoreSystem Instance { get; private set; }
     
-    [SerializeField] private TextMeshProUGUI _scoreText;
-
+    [SerializeField] private float _startMultiplierTimer;
+    
     private int _score;
+    private int _multiplier = 1;
+
+    private float _multiplierTimer;
     
     private void Awake()
     {
@@ -26,15 +27,35 @@ public class ScoreSystem : MonoBehaviour
         GameStateCallBacks.Instance.OnGameWon += AddScoreToPlayer;
     }
 
-    public void UpdateScore(int score)
+    private void Update()
     {
-        _score += score;
-        _scoreText.text = _score.ToString();
+        if (_multiplierTimer > 0)
+        {
+            _multiplierTimer -= Time.deltaTime;
+        }
+        else
+            _multiplier = 1;
+    }
+
+    public void UpdateScore()
+    {
+        _score += _multiplier * 3;
+        _multiplier++;
+        _multiplierTimer = _startMultiplierTimer;
     }
 
     public int GetScore()
     {
         return _score;
+    }
+    
+    public int GetMultiplier()
+    {
+        return _multiplier;
+    }
+    public float GetMultiplierTimer()
+    {
+        return _multiplierTimer/_startMultiplierTimer;
     }
 
     public void AddScoreToPlayer()

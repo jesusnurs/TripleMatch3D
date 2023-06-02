@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class MainMenuUI : UIElement
@@ -10,7 +11,8 @@ public class MainMenuUI : UIElement
     [SerializeField] private Button _playButton;
 
     [SerializeField] private TextMeshProUGUI _levelCountText;
-    [SerializeField] private TextMeshProUGUI _scoreToOpenChest;
+    [SerializeField] private TextMeshProUGUI _scoreWoodenChest;
+    [SerializeField] private TextMeshProUGUI _scoreGoldenChest;
     public override void AddListeners()
     {
         _playButton.onClick.AddListener(StartLevel);
@@ -24,7 +26,8 @@ public class MainMenuUI : UIElement
     public override void Init()
     {
         _levelCountText.text = MainMenu.Instance.GetCurrentLevel();
-        _scoreToOpenChest.text = MainMenu.Instance.GetCurrentScore();
+        _scoreWoodenChest.text = MainMenu.Instance.GetScoreWoodenChest();
+        _scoreGoldenChest.text = MainMenu.Instance.GetScoreGoldenChest();
     }
 
     private void StartLevel()
