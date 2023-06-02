@@ -1,4 +1,4 @@
-**Trello** - https://trello.com/invite/triplematch3d/ATTI228ff8f63a9777c34611c780c111abba49A84543
+**Trello** - https://trello.com/invite/b/dNf0ieAc/ATTIdd2d75bf9e059c53a7011356e3aff945F5712141/план-проекта
 
 # Название проекта: TripleMatch3D
 
