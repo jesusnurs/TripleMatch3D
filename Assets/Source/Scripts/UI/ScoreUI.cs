@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,9 +8,15 @@ using UnityEngine.UI;
 public class ScoreUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _scoreText;
+    [SerializeField] private TextMeshProUGUI _levelText;
     [SerializeField] private Slider _multiplierSlider;
     [SerializeField] private TextMeshProUGUI _multiplierSliderText;
-    
+
+    private void Start()
+    {
+        _levelText.text = "Level " + PlayerPrefs.GetInt("level");
+    }
+
     public void Update()
     {
         _scoreText.text = ScoreSystem.Instance.GetScore().ToString();

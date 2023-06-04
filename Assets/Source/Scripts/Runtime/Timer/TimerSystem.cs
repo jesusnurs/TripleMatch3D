@@ -65,7 +65,8 @@ public class TimerSystem : MonoBehaviour
     public void ResumeTimer()
     {
         isRunning = true;
-        OnResumed?.Invoke();
+        SelectionSystem.Instance.ActivateSelectionSystem();
+        //OnResumed?.Invoke();
     }
 
     public void StopTimer()

@@ -29,6 +29,8 @@ public class MainMenu : MonoBehaviour
         if(!PlayerPrefs.HasKey("level"))
             PlayerPrefs.SetInt("level",1);
         
+        if(!PlayerPrefs.HasKey("coins"))
+            PlayerPrefs.SetInt("coins",0);
     }
 
     public string GetCurrentLevel()
@@ -38,24 +40,24 @@ public class MainMenu : MonoBehaviour
     
     public string GetScoreWoodenChest()
     {
-        return PlayerPrefs.GetInt("score").ToString() + "/1000";
+        return PlayerPrefs.GetInt("score") + "/5000";
     }
     
     public string GetScoreGoldenChest()
     {
-        return PlayerPrefs.GetInt("level").ToString() + "/" + PlayerPrefs.GetInt("NextGoldenChest").ToString();
+        return PlayerPrefs.GetInt("level") + "/" + PlayerPrefs.GetInt("NextGoldenChest");
     }
 
     private void CheckScoreWoodenChest()
     {
-        if(!PlayerPrefs.HasKey("score"))
+        if (!PlayerPrefs.HasKey("score"))
             PlayerPrefs.SetInt("score",0);
         else
         {
             int score = PlayerPrefs.GetInt("score");
-            while(score >= 1000)
+            if(score >= 5000)
             {
-                score -= 1000;
+                score = 0;
                 PlayerPrefs.SetInt("score",score);
                 OpenWoodenChest();
             }
@@ -70,7 +72,7 @@ public class MainMenu : MonoBehaviour
         {
             int level = PlayerPrefs.GetInt("level");
             int nextGoldenChest = PlayerPrefs.GetInt("NextGoldenChest");
-            while(level >= nextGoldenChest)
+            if(level >= nextGoldenChest)
             {
                 PlayerPrefs.SetInt("NextGoldenChest",nextGoldenChest+5);
                 OpenGoldenChest();
@@ -81,10 +83,17 @@ public class MainMenu : MonoBehaviour
     private void OpenWoodenChest()
     {
         Debug.Log("OpenWoodenChest");
+        UserBalanceSystem.Instance.AddCoins(100);
     }
     
     private void OpenGoldenChest()
     {
         Debug.Log("OpenGoldenChest");
+        UserBalanceSystem.Instance.AddCoins(50);
+    }
+
+    public string GetUserCoinsCount()
+    {
+        return UserBalanceSystem.Instance.GetUserCoinsCount().ToString();
     }
 }

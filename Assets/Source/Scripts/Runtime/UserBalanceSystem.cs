@@ -4,15 +4,35 @@ using UnityEngine;
 
 public class UserBalanceSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static UserBalanceSystem Instance;
+
+    private void Awake()
     {
-        
+        if (Instance != null)
+            Destroy(gameObject);
+        else
+            Instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public int GetUserCoinsCount()
     {
+        return PlayerPrefs.GetInt("coins");
+    }
+
+    public void AddCoins(int count)
+    {
+        int currentCoins = GetUserCoinsCount() + count;
+        PlayerPrefs.SetInt("coins",currentCoins);
+    }
+    public bool BuySomething(int cost)
+    {
+        int currentCoins = GetUserCoinsCount();
         
+        if (currentCoins < cost)
+            return false;
+
+        currentCoins -= cost;
+        PlayerPrefs.SetInt("coins",currentCoins);
+        return true;
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -13,6 +14,7 @@ public class MainMenuUI : UIElement
     [SerializeField] private TextMeshProUGUI _levelCountText;
     [SerializeField] private TextMeshProUGUI _scoreWoodenChest;
     [SerializeField] private TextMeshProUGUI _scoreGoldenChest;
+    [SerializeField] private TextMeshProUGUI _coinsText;
     public override void AddListeners()
     {
         _playButton.onClick.AddListener(StartLevel);
@@ -28,6 +30,11 @@ public class MainMenuUI : UIElement
         _levelCountText.text = MainMenu.Instance.GetCurrentLevel();
         _scoreWoodenChest.text = MainMenu.Instance.GetScoreWoodenChest();
         _scoreGoldenChest.text = MainMenu.Instance.GetScoreGoldenChest();
+    }
+
+    private void Update()
+    {
+        _coinsText.text = MainMenu.Instance.GetUserCoinsCount();
     }
 
     private void StartLevel()

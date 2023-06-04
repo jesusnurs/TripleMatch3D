@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour
     public static Inventory Instance { get; private set; }
     
     [SerializeField] private List<Cell> _listOfCells;
-    
+
     public Action OnInventoryFull { get; set; }
 
     private bool _checkInventoryFull;
@@ -48,6 +48,7 @@ public class Inventory : MonoBehaviour
         if(_checkInventoryFull)
             CheckInventoryFull();
     }
+    
 
     private void CheckTriple()
     {

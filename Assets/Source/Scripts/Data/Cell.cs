@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ public class Cell : MonoBehaviour
 {
     [SerializeField] private Image _icon;
 
-    public int idObject = -1;
+    public int idObject = Int32.MaxValue;
     
     public void SetObject(Sprite sprite,int id)
     {
@@ -20,7 +21,7 @@ public class Cell : MonoBehaviour
     {
         _icon.enabled = false;
         _icon.sprite = null;
-        idObject = -1;
+        idObject = Int32.MaxValue;
     }
 
     public bool IsEmpty()
