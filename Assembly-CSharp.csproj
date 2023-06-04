@@ -69,6 +69,10 @@
      <Compile Include="Assets\Source\Scripts\UI\Inventory\FullInventoryUI.cs" />
      <Compile Include="Assets\Source\Scripts\Runtime\Saves\SaveSystem.cs" />
      <Compile Include="Assets\Source\Scripts\Runtime\UI\UISystem.cs" />
+     <Compile Include="Assets\Source\Scripts\Runtime\UserHeartsSystem.cs" />
+     <Compile Include="Assets\Source\Scripts\UI\MoreHealthUI.cs" />
+     <Compile Include="Assets\Source\Scripts\UI\PaoMainUI.cs" />
+     <Compile Include="Assets\Source\Scripts\UI\PauseUI.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\ExternalSources\3DFruits\Food_ReadMe.txt" />

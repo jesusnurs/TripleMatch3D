@@ -107,4 +107,9 @@ public class Inventory : MonoBehaviour
         }
         OnInventoryFull?.Invoke();
     }
+
+    public void SetListOfCells(List<Cell> list)
+    {
+        _listOfCells = list;
+    }
 }

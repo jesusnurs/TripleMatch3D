@@ -31,6 +31,9 @@ public class MainMenu : MonoBehaviour
         
         if(!PlayerPrefs.HasKey("coins"))
             PlayerPrefs.SetInt("coins",0);
+        
+        if(!PlayerPrefs.HasKey("hearts"))
+            PlayerPrefs.SetInt("hearts",10);
     }
 
     public string GetCurrentLevel()
@@ -95,5 +98,10 @@ public class MainMenu : MonoBehaviour
     public string GetUserCoinsCount()
     {
         return UserBalanceSystem.Instance.GetUserCoinsCount().ToString();
+    }
+
+    public string GetLeftHearts()
+    {
+        return PlayerPrefs.GetInt("hearts") + "/10";
     }
 }

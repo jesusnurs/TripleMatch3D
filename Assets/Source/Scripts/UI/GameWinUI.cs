@@ -27,6 +27,5 @@ public class GameWinUI : UIElement
     private void BackHome()
     {
         SceneManager.LoadScene("MainMenu");
-        UISystem.Instance.CloseCurrentWindow();
     }
 }

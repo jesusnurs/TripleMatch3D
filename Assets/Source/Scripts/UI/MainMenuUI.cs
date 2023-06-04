@@ -10,19 +10,24 @@ using UnityEngine.UI;
 public class MainMenuUI : UIElement
 {
     [SerializeField] private Button _playButton;
+    [SerializeField] private Button _addCoinsButton;
+    [SerializeField] private Button _addHeartsButton;
 
     [SerializeField] private TextMeshProUGUI _levelCountText;
     [SerializeField] private TextMeshProUGUI _scoreWoodenChest;
     [SerializeField] private TextMeshProUGUI _scoreGoldenChest;
     [SerializeField] private TextMeshProUGUI _coinsText;
+    [SerializeField] private TextMeshProUGUI _heartsText;
     public override void AddListeners()
     {
         _playButton.onClick.AddListener(StartLevel);
+        _addHeartsButton.onClick.AddListener(AddHearts);
     }
 
     public override void RemoveListeners()
     {
         _playButton.onClick.RemoveListener(StartLevel);
+        _addHeartsButton.onClick.RemoveListener(AddHearts);
     }
 
     public override void Init()
@@ -34,11 +39,18 @@ public class MainMenuUI : UIElement
 
     private void Update()
     {
+        _heartsText.text = MainMenu.Instance.GetLeftHearts();
         _coinsText.text = MainMenu.Instance.GetUserCoinsCount();
     }
 
     private void StartLevel()
     {
-        SceneManager.LoadScene("LevelScene");
+        if(UserHeartsSystem.Instance.RemoveHeart())
+            SceneManager.LoadScene("LevelScene");
+    }
+
+    private void AddHearts()
+    {
+        UISystem.Instance.OpenAboveWindow("MoreHealth");
     }
 }

@@ -9,7 +9,12 @@ public class Cell : MonoBehaviour
     [SerializeField] private Image _icon;
 
     public int idObject = Int32.MaxValue;
-    
+
+    private void Start()
+    {
+        ClearCell();
+    }
+
     public void SetObject(Sprite sprite,int id)
     {
         _icon.enabled = true;

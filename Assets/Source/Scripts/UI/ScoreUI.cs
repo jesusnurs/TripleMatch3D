@@ -19,16 +19,19 @@ public class ScoreUI : MonoBehaviour
 
     public void Update()
     {
-        _scoreText.text = ScoreSystem.Instance.GetScore().ToString();
-        _multiplierSliderText.text = "x " + ScoreSystem.Instance.GetMultiplier().ToString();
-        
-        var multiplierTimer = ScoreSystem.Instance.GetMultiplierTimer();
-
-        if (multiplierTimer > 0)
+        if (TimerSystem.Instance.isRunning)
         {
-            _multiplierSlider.value = multiplierTimer;
+            _scoreText.text = ScoreSystem.Instance.GetScore().ToString();
+            _multiplierSliderText.text = "x " + ScoreSystem.Instance.GetMultiplier().ToString();
+        
+            var multiplierTimer = ScoreSystem.Instance.GetMultiplierTimer();
+
+            if (multiplierTimer > 0)
+            {
+                _multiplierSlider.value = multiplierTimer;
+            }
+            else
+                _multiplierSlider.value = 0;
         }
-        else
-            _multiplierSlider.value = 0;
     }
 }

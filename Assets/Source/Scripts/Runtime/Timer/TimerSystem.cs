@@ -8,7 +8,7 @@ public class TimerSystem : MonoBehaviour
 {
     public static TimerSystem Instance;
     
-    private bool isRunning;
+    public bool isRunning;
     [SerializeField]private float timeLeft;
     private float lazyTime;
 

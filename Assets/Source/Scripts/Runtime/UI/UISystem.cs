@@ -42,8 +42,19 @@ public class UISystem : MonoBehaviour
     {
         if(_currentWindow != null)
             _currentWindow.Close();
-
         
+        var window = Instantiate(windowDictionary[windowName],_UIFolder).GetComponent<UIElement>();
+        //window.gameObject.transform.SetParent(_UIFolder);
+        
+        windowStack.Push(window);
+        window.Open();
+
+        _currentWindow = window;
+    }
+
+    public void OpenAboveWindow(string windowName)
+    {
+        windowStack.Peek().RemoveListeners();
         var window = Instantiate(windowDictionary[windowName],_UIFolder).GetComponent<UIElement>();
         //window.gameObject.transform.SetParent(_UIFolder);
         
