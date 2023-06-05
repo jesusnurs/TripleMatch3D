@@ -34,6 +34,12 @@ public class MainMenu : MonoBehaviour
         
         if(!PlayerPrefs.HasKey("hearts"))
             PlayerPrefs.SetInt("hearts",10);
+        
+        if(!PlayerPrefs.HasKey("musicOn"))
+            PlayerPrefs.SetInt("musicOn",1);
+        
+        if(!PlayerPrefs.HasKey("soundsOn"))
+            PlayerPrefs.SetInt("soundsOn",1);
     }
 
     public string GetCurrentLevel()

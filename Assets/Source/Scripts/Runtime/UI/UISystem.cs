@@ -38,6 +38,7 @@ public class UISystem : MonoBehaviour
             OpenWindow(_defaultWindow);
     }
 
+    //Open new window with closing previous
     public void OpenWindow(string windowName)
     {
         if(_currentWindow != null)
@@ -51,7 +52,8 @@ public class UISystem : MonoBehaviour
 
         _currentWindow = window;
     }
-
+    
+    //Don't close previous window, just open new window above previous
     public void OpenAboveWindow(string windowName)
     {
         windowStack.Peek().RemoveListeners();

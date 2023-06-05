@@ -12,6 +12,7 @@ public class MainMenuUI : UIElement
     [SerializeField] private Button _playButton;
     [SerializeField] private Button _addCoinsButton;
     [SerializeField] private Button _addHeartsButton;
+    [SerializeField] private Button _settingsButton;
 
     [SerializeField] private TextMeshProUGUI _levelCountText;
     [SerializeField] private TextMeshProUGUI _scoreWoodenChest;
@@ -22,12 +23,14 @@ public class MainMenuUI : UIElement
     {
         _playButton.onClick.AddListener(StartLevel);
         _addHeartsButton.onClick.AddListener(AddHearts);
+        _settingsButton.onClick.AddListener(OpenSettings);
     }
 
     public override void RemoveListeners()
     {
         _playButton.onClick.RemoveListener(StartLevel);
         _addHeartsButton.onClick.RemoveListener(AddHearts);
+        _settingsButton.onClick.RemoveListener(OpenSettings);
     }
 
     public override void Init()
@@ -52,5 +55,10 @@ public class MainMenuUI : UIElement
     private void AddHearts()
     {
         UISystem.Instance.OpenAboveWindow("MoreHealth");
+    }
+
+    private void OpenSettings()
+    {
+        UISystem.Instance.OpenAboveWindow("Settings");
     }
 }

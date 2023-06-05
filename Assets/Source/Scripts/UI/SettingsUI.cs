@@ -5,11 +5,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PauseUI : UIElement
+public class SettingsUI : UIElement
 {
     [SerializeField] private Button _closeButton;
-    [SerializeField] private Button _homeButton;
-    
+
     [Space]
     [Header("Music/Sound buttons")]
     [SerializeField] private Button _musicButton;
@@ -25,7 +24,6 @@ public class PauseUI : UIElement
     public override void AddListeners()
     {
         _closeButton.onClick.AddListener(CloseWindow);
-        _homeButton.onClick.AddListener(BackHome);
         _musicButton.onClick.AddListener(SwitchMusicButton);
         _soundsButton.onClick.AddListener(SwitchSoundsButton);
     }
@@ -33,7 +31,6 @@ public class PauseUI : UIElement
     public override void RemoveListeners()
     {
         _closeButton.onClick.RemoveListener(CloseWindow);
-        _homeButton.onClick.RemoveListener(BackHome);
         _musicButton.onClick.RemoveListener(SwitchMusicButton);
         _soundsButton.onClick.RemoveListener(SwitchSoundsButton);
     }
@@ -54,12 +51,6 @@ public class PauseUI : UIElement
     private void CloseWindow()
     {
         UISystem.Instance.CloseCurrentWindow();
-        TimerSystem.Instance.ResumeTimer();
-    }
-
-    private void BackHome()
-    {
-        SceneManager.LoadScene("MainMenu");
     }
 
     private void SwitchMusicButton()

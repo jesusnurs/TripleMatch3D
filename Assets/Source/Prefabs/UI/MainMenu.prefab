@@ -1154,6 +1154,7 @@ GameObject:
   - component: {fileID: 3780852173214661428}
   - component: {fileID: 3090711037110689001}
   - component: {fileID: 7501534932297005290}
+  - component: {fileID: 4299735962866368864}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -1264,6 +1265,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4299735962866368864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5820549502537565603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2dd27cf8cd40946a83c68ed69ae829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5833665929527283143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,6 +1365,7 @@ GameObject:
   - component: {fileID: 7535411259877208970}
   - component: {fileID: 3835870470743623775}
   - component: {fileID: 6679835094873709407}
+  - component: {fileID: 8916178975136051976}
   m_Layer: 5
   m_Name: GetMoreHeartsButton
   m_TagString: Untagged
@@ -1461,6 +1475,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8916178975136051976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5886129322090143064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2dd27cf8cd40946a83c68ed69ae829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6001388672884346063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,6 +1548,7 @@ MonoBehaviour:
   _playButton: {fileID: 6001388674399832429}
   _addCoinsButton: {fileID: 763056300390416825}
   _addHeartsButton: {fileID: 6679835094873709407}
+  _settingsButton: {fileID: 7501534932297005290}
   _levelCountText: {fileID: 6001388674125944303}
   _scoreWoodenChest: {fileID: 7625921499842934185}
   _scoreGoldenChest: {fileID: 2111863949688778948}
@@ -1831,6 +1858,7 @@ GameObject:
   - component: {fileID: 6001388674399832431}
   - component: {fileID: 6001388674399832430}
   - component: {fileID: 6001388674399832429}
+  - component: {fileID: 6354861456466803438}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -1941,6 +1969,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6354861456466803438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6001388674399832427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2dd27cf8cd40946a83c68ed69ae829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6001388674560787579
 GameObject:
   m_ObjectHideFlags: 0
@@ -2699,6 +2739,7 @@ GameObject:
   - component: {fileID: 5523076282377278032}
   - component: {fileID: 7531374197106546454}
   - component: {fileID: 763056300390416825}
+  - component: {fileID: 8430512484496749730}
   m_Layer: 5
   m_Name: GetMoreCoinsButton
   m_TagString: Untagged
@@ -2808,6 +2849,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8430512484496749730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8858195216875640702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2dd27cf8cd40946a83c68ed69ae829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9010652110024502816
 GameObject:
   m_ObjectHideFlags: 0

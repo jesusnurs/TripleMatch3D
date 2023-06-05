@@ -79,9 +79,10 @@ public class Inventory : MonoBehaviour
 
         _checkInventoryFull = true;
     }
-
+    
     private IEnumerator ClearCells(int id)
     {
+        //Animation of destoying objects in inventory by ID
         yield return new WaitForSeconds(0.2f);
         int cnt = 0;
         foreach (Cell cell in _listOfCells)
@@ -95,7 +96,8 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-
+    
+    //Check if we don't have any space in inventory
     private void CheckInventoryFull()
     {
         foreach (Cell cell in _listOfCells)

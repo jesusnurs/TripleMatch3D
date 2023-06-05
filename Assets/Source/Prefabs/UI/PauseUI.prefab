@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3967633679236026852}
   - component: {fileID: 3531857626738805186}
   - component: {fileID: 3725204945816470123}
+  - component: {fileID: 4732827465066950446}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -121,6 +122,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4732827465066950446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3055503713025331498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2dd27cf8cd40946a83c68ed69ae829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5710024553198686061
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +146,7 @@ GameObject:
   - component: {fileID: 5710024553198686057}
   - component: {fileID: 5710024553198686062}
   - component: {fileID: 5710024553198686063}
+  - component: {fileID: 8344684914530185049}
   m_Layer: 5
   m_Name: Music
   m_TagString: Untagged
@@ -242,6 +256,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8344684914530185049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5710024553198686061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2dd27cf8cd40946a83c68ed69ae829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5710024554458131285
 GameObject:
   m_ObjectHideFlags: 0
@@ -254,6 +280,7 @@ GameObject:
   - component: {fileID: 5710024554458131281}
   - component: {fileID: 5710024554458131286}
   - component: {fileID: 5710024554458131287}
+  - component: {fileID: 2767669747036243538}
   m_Layer: 5
   m_Name: Sounds
   m_TagString: Untagged
@@ -363,6 +390,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2767669747036243538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5710024554458131285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2dd27cf8cd40946a83c68ed69ae829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5710024555234887260
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,6 +614,7 @@ GameObject:
   - component: {fileID: 6415420097532861641}
   - component: {fileID: 6415420097532861646}
   - component: {fileID: 6415420097532861647}
+  - component: {fileID: 1090590275515895784}
   m_Layer: 5
   m_Name: LeaveButton
   m_TagString: Untagged
@@ -685,6 +725,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1090590275515895784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6415420097532861645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b2dd27cf8cd40946a83c68ed69ae829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6415420097722795465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,6 +1103,12 @@ MonoBehaviour:
   Name: Pause
   _closeButton: {fileID: 3725204945816470123}
   _homeButton: {fileID: 6415420097532861647}
+  _musicButton: {fileID: 5710024553198686063}
+  _soundsButton: {fileID: 5710024554458131287}
+  _musicOnSprite: {fileID: 21300000, guid: 4d59b2a7c5d3cf84283218f290eae754, type: 3}
+  _musicOffSprite: {fileID: 21300000, guid: 25976851b7a72d642b2516ab03c395e0, type: 3}
+  _soundsOnSprite: {fileID: 21300000, guid: b6b0ac0e091370f4d8ffb86a74b0aa3b, type: 3}
+  _soundsOffSprite: {fileID: 21300000, guid: b8a65be4b4701b24e98b8424158cdcc1, type: 3}
 --- !u!1 &6415420098417878539
 GameObject:
   m_ObjectHideFlags: 0
