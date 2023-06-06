@@ -17,5 +17,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 341e2893158dd654eb25882662f4d8da, type: 2}
   - {fileID: 11400000, guid: 2b5cfaf2d2880e248bf12ac9eb9b45fd, type: 2}
   - {fileID: 11400000, guid: 73fbbf0db8cfa594aac1d7b2029541b7, type: 2}
-  AmountOfPairs: 1
+  - {fileID: 11400000, guid: 4a260dc9b1d5b0148a70ca970aa70d0f, type: 2}
+  - {fileID: 11400000, guid: a5e39a06660683b4fb39d35b4262a44d, type: 2}
+  AmountOfPairs: 5
   Timer: 300
