@@ -41,37 +41,37 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Source\Scripts\Data\SelectableObject.cs" />
-     <Compile Include="Assets\Source\Scripts\Runtime\Pao\SelectionSystem.cs" />
-     <Compile Include="Assets\Source\Scripts\Data\Cell.cs" />
-     <Compile Include="Assets\Source\Scripts\Data\PaoLevelObject.cs" />
-     <Compile Include="Assets\Source\Scripts\UI\Sounds\ButtonSoundComponent.cs" />
-     <Compile Include="Assets\Source\Scripts\Runtime\Timer\TimerSystem.cs" />
-     <Compile Include="Assets\Source\Scripts\Runtime\Pao\Outline.cs" />
-     <Compile Include="Assets\Source\Scripts\UI\GameLostUI.cs" />
-     <Compile Include="Assets\Source\Scripts\Runtime\Score\ScoreSystem.cs" />
-     <Compile Include="Assets\Source\Scripts\UI\Sounds\AudioSystem.cs" />
-     <Compile Include="Assets\Source\Scripts\UI\GameWinUI.cs" />
      <Compile Include="Assets\Source\Scripts\UI\MainMenuUI.cs" />
      <Compile Include="Assets\Source\Scripts\UI\Inventory\InventoryUI.cs" />
      <Compile Include="Assets\Source\Scripts\UI\SettingsUI.cs" />
      <Compile Include="Assets\Source\Scripts\Runtime\Inventory\Inventory.cs" />
+     <Compile Include="Assets\Source\Scripts\Data\SelectableObject.cs" />
      <Compile Include="Assets\Source\Scripts\Runtime\GameStateCallBacks.cs" />
+     <Compile Include="Assets\Source\Scripts\Runtime\Pao\SelectionSystem.cs" />
+     <Compile Include="Assets\Source\Scripts\Data\Cell.cs" />
      <Compile Include="Assets\Source\Scripts\Runtime\UserHeartsSystem.cs" />
      <Compile Include="Assets\Source\Scripts\UI\PaoMainUI.cs" />
      <Compile Include="Assets\Source\Scripts\Runtime\LevelManagement\LevelLoaderSystem.cs" />
+     <Compile Include="Assets\Source\Scripts\Data\PaoLevelObject.cs" />
      <Compile Include="Assets\Source\Scripts\UI\ScoreUI.cs" />
+     <Compile Include="Assets\Source\Scripts\UI\Sounds\ButtonSoundComponent.cs" />
+     <Compile Include="Assets\Source\Scripts\Runtime\Timer\TimerSystem.cs" />
+     <Compile Include="Assets\Source\Scripts\Runtime\Pao\Outline.cs" />
      <Compile Include="Assets\Source\Scripts\UI\Timer\PaoTimerUI.cs" />
      <Compile Include="Assets\Source\Scripts\Runtime\UI\UIElement.cs" />
      <Compile Include="Assets\Source\Scripts\UI\PauseUI.cs" />
+     <Compile Include="Assets\Source\Scripts\UI\GameLostUI.cs" />
      <Compile Include="Assets\Source\Scripts\UI\Timer\TimerFinishedUI.cs" />
      <Compile Include="Assets\Source\Scripts\Runtime\LevelObjectsCounter.cs" />
      <Compile Include="Assets\Source\Scripts\Runtime\SpawnObjects.cs" />
      <Compile Include="Assets\Source\Scripts\Runtime\MainMenu.cs" />
      <Compile Include="Assets\Source\Scripts\Runtime\UserBalanceSystem.cs" />
+     <Compile Include="Assets\Source\Scripts\Runtime\Score\ScoreSystem.cs" />
      <Compile Include="Assets\Source\Scripts\UI\MoreHealthUI.cs" />
      <Compile Include="Assets\Source\Scripts\Data\PaoSelectableObject.cs" />
+     <Compile Include="Assets\Source\Scripts\UI\Sounds\AudioSystem.cs" />
      <Compile Include="Assets\Source\Scripts\UI\Inventory\FullInventoryUI.cs" />
+     <Compile Include="Assets\Source\Scripts\UI\GameWinUI.cs" />
      <Compile Include="Assets\Source\Scripts\Runtime\UI\UISystem.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -713,8 +713,14 @@
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>C:\Unity\TripleMatch3D\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.Services.Core.Analytics">
+     <HintPath>C:\Unity\TripleMatch3D\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>C:\Unity\TripleMatch3D\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core.Environments">
+     <HintPath>C:\Unity\TripleMatch3D\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
      <HintPath>C:\Unity\TripleMatch3D\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
@@ -740,6 +746,9 @@
      <Reference Include="Unity.Rider.Editor">
      <HintPath>C:\Unity\TripleMatch3D\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+     <HintPath>C:\Unity\TripleMatch3D\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="UnityEngine.UI">
      <HintPath>C:\Unity\TripleMatch3D\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
@@ -748,15 +757,6 @@
      </Reference>
      <Reference Include="Unity.EditorCoroutines.Editor">
      <HintPath>C:\Unity\TripleMatch3D\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Services.Core.Analytics">
-     <HintPath>C:\Unity\TripleMatch3D\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Services.Core.Environments">
-     <HintPath>C:\Unity\TripleMatch3D\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-     <HintPath>C:\Unity\TripleMatch3D\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
