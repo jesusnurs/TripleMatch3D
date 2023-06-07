@@ -1,5 +1,5 @@
 **Trello** - https://trello.com/invite/b/dNf0ieAc/ATTIdd2d75bf9e059c53a7011356e3aff945F5712141/план-проекта \
-**Build** - https://drive.google.com/file/d/1kV-nN45vqPHAzVB7r4eA2jycfYspeoRo/view?usp=drive_link
+**Build** - https://drive.google.com/file/d/1kV-nN45vqPHAzVB7r4eA2jycfYspeoRo/view?usp=sharing
 
 # Название проекта: TripleMatch3D
 
